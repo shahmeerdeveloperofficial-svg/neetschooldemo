@@ -10,48 +10,35 @@ export const NavList = [
   },
   {
     title: "Academics",
-    slug: "/Curriculum/EarlyYears",
+    slug: "/Academics",
     content: [
-      { title: "Preschool (PG, Nursery, Prep)", slug: "/Curriculum/EarlyYears" },
-      { title: "Primary School (Class 1-5)", slug: "/Curriculum/EarlyYears" },
-      { title: "Middle School (Class 6-8)", slug: "/Curriculum/EarlyYears" },
-      { title: "Secondary / Matric (Class 9-10)", slug: "/Curriculum/EarlyYears" },
+      { title: "All Programmes Overview", slug: "/Academics" },
+      { title: "Preschool (PG, Nursery, Prep)", slug: "/Academics#preschool" },
+      { title: "Primary School (Classes 1–5)", slug: "/Academics#primary" },
+      { title: "Middle School (Classes 6–8)", slug: "/Academics#middle" },
+      { title: "Secondary / Matric (Classes 9–10)", slug: "/Academics#secondary" },
     ],
   },
   {
     title: "Curriculum",
-    slug: "/Curriculum/EarlyYears",
-    content: [
-      { title: "Core Academic Subjects", slug: "/Curriculum/EarlyYears" },
-      { title: "21st-Century Skills", slug: "/Curriculum/EarlyYears" },
-    ],
+    slug: "/Curriculum",
   },
   {
     title: "Student Life",
     slug: "/SocietyAndClubs",
     content: [
-      { title: "Co-Curricular & Sports", slug: "/SocietyAndClubs" },
-      { title: "Character & Islamic Values", slug: "/SocietyAndClubs" },
+      { title: "Societies, Sports & Clubs", slug: "/SocietyAndClubs" },
       { title: "Student Counselling & Mentoring", slug: "/StudentCounselling" },
-      { title: "Parenting Workshop", slug: "/ParentingWorkshop" },
+      { title: "Parenting Workshops & PTMs", slug: "/ParentingWorkshop" },
     ],
   },
   {
     title: "Why NEET",
-    slug: "/OurPhilosophy",
-    content: [
-      { title: "Why Families Choose Us", slug: "/AboutUs" },
-      { title: "Our 6 Educational Priorities", slug: "/OurPhilosophy" },
-      { title: "Our Vision & Mission", slug: "/AboutUs" },
-    ],
+    slug: "/WhyNEET",
   },
   {
     title: "Admissions",
     slug: "/OnlineAdmission",
-    content: [
-      { title: "Online Admission Form", slug: "/OnlineAdmission" },
-      { title: "5-Step Admission Process", slug: "/OnlineAdmission" },
-    ],
   },
   {
     title: "Careers",

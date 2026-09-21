@@ -22,38 +22,44 @@ const studentLife = [
   {
     title: "Reading & Expression",
     desc: "Developing language, confidence, communication and public presentation skills.",
-    image: "/slider5.JPG",
+    image: "/hero4.jpg",
+    imagePos: "object-center",
     tag: "Expression",
   },
   {
     title: "Sports & Wellbeing",
     desc: "Promoting physical activity, sportsmanship, teamwork, discipline and healthy routines.",
-    image: "/sports1.jpg",
+    image: "/hero5.jpg",
+    imagePos: "object-center",
     tag: "Physical Life",
   },
   {
     title: "Creative Activities",
     desc: "Encouraging imagination through art, design, interactive projects, and creative expression.",
-    image: "/slider6.jpg",
+    image: "/hero6.jpg",
+    imagePos: "object-center",
     tag: "Creativity",
   },
   {
     title: "Competitions & Events",
     desc: "Opportunities to participate, perform, compete and build unshakeable self-confidence.",
-    image: "/slider7.jpg",
+    image: "/hero7.jpg",
+    imagePos: "object-center",
     tag: "Excellence",
   },
   {
-    title: "Assemblies",
-    desc: "Building communication skills, moral discipline, and awareness through student participation.",
-    image: "/hero3.jpg",
+    title: "Assemblies & Values",
+    desc: "Building communication skills, moral discipline, and ethical awareness through student participation.",
+    image: "/hero.jpg",
+    imagePos: "object-center",
     tag: "Leadership",
   },
   {
     title: "Educational Activities",
     desc: "Connecting classroom concepts with practical experience, experiments, and real-world learning.",
-    image: "/hero2.jpg",
-    tag: "Exploration",
+    image: "/hero9.jpg",
+    imagePos: "object-center",
+    tag: "Academics",
   },
 ];
 
@@ -147,15 +153,15 @@ export default function CharacterStudentLife() {
               key={idx}
               className="group rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold/50 transition-all duration-300 flex flex-col justify-between"
             >
-              <div className="relative h-48 sm:h-52 w-full overflow-hidden">
+              <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-[#001738]">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`object-cover ${item.imagePos || "object-top"} group-hover:scale-105 transition-transform duration-500`}
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
                 <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/50 backdrop-blur text-gold text-xs font-bold">
                   {item.tag}
                 </span>
