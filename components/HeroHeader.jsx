@@ -34,88 +34,53 @@ const HeroHeader = ({
         <div className="relative text-light z-10 flex-1 flex flex-col items-center justify-center gap-3 sm:gap-4 px-4 sm:px-6 py-12 sm:py-16">
           {/* Admissions Badge */}
           {isHomePage && (
-            <motion.div
-              initial={{ y: -15, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-gold/40 backdrop-blur text-gold font-medium text-xs sm:text-sm tracking-wide"
-            >
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-gold/40 backdrop-blur text-gold font-medium text-xs sm:text-sm tracking-wide">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
               </span>
               <span>{subtitle}</span>
-            </motion.div>
+            </div>
           )}
 
-          <motion.h1
-            initial={{ y: -20, opacity: 0 }}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: {
-                delay: 0.2,
-                duration: 0.8,
-                type: "tween",
-                ease: [0.76, 0, 0.24, 1],
-              },
-            }}
+          <h1
             style={{ textShadow: "0 0 1.5rem rgba(0,0,0,0.5)" }}
             className="h1 text-center text-white tracking-tight"
           >
             {title}
-          </motion.h1>
+          </h1>
 
           {isHomePage && tagline && (
-            <motion.p
-              initial={{ y: -15, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.35, duration: 0.6 }}
+            <p
               className="font-serif italic text-gold text-lg sm:text-2xl md:text-3xl font-normal text-center"
             >
               &ldquo;{tagline}&rdquo;
-            </motion.p>
+            </p>
           )}
 
           {description && (
-            <motion.h4
-              initial={{ y: -20, opacity: 0 }}
-              animate={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  delay: 0.45,
-                  duration: 0.8,
-                  type: "tween",
-                  ease: [0.76, 0, 0.24, 1],
-                },
-              }}
+            <h4
               style={{ textShadow: "0 0 .5rem rgba(0,0,0,0.4)" }}
               className="text-center max-w-[min(65ch,92%)] leading-relaxed text-xs sm:text-base md:text-lg text-white/90 px-2"
             >
               {description}
-            </motion.h4>
+            </h4>
           )}
 
           {isHomePage && (
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="flex flex-wrap gap-3 sm:gap-4 justify-center items-center mt-3 pt-2"
-            >
+            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center items-center mt-3 pt-2">
               <Link href="/OnlineAdmission">
-                <button className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl bg-gold hover:bg-main text-dark font-bold text-sm sm:text-base shadow-lg hover:shadow-gold/30 transition-all duration-200 active:scale-95 flex items-center gap-2">
+                <button aria-label="Apply for Admission" className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl bg-gold hover:bg-main text-dark font-bold text-sm sm:text-base shadow-lg hover:shadow-gold/30 transition-all duration-200 active:scale-95 flex items-center gap-2">
                   <span>Apply for Admission</span>
                   <span>→</span>
                 </button>
               </Link>
               <a href="#Welcome">
-                <button className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm sm:text-base border border-white/30 backdrop-blur transition-all duration-200 active:scale-95">
+                <button aria-label="Explore Our School" className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm sm:text-base border border-white/30 backdrop-blur transition-all duration-200 active:scale-95">
                   Explore Our School
                 </button>
               </a>
-            </motion.div>
+            </div>
           )}
 
           {isHomePage && <Sections />}
@@ -206,10 +171,10 @@ const Sections = () => {
             <div className={`w-9 xs:w-10 sm:w-14 md:w-16 -top-4 xs:-top-5 sm:-top-7 md:-top-8 aspect-square ${item.bg} ${item.hoverBg} ${item.shadow} shadow-md hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 left-1/2 -translate-x-1/2 absolute flex items-center justify-center rounded-full border-2 border-white/20`}>
               <Image
                 src={item.icon}
-                width={300}
-                height={300}
+                width={48}
+                height={48}
                 alt={item.title}
-                priority
+                sizes="48px"
                 className="w-[55%]"
               />
             </div>

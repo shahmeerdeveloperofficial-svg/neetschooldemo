@@ -6,7 +6,18 @@ import LenisSmooth from "../components/LenisSmooth";
 import Footer from "../components/Footer";
 
 // Load Poppins font
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "700"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#001b44",
+};
 
 export const metadata = {
   title: "NEET School System | Play Group to Matric | Gujranwala",

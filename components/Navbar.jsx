@@ -58,9 +58,10 @@ const Navbar = () => {
           <Link href={"/"} name="home link" className="mr-auto flex items-center">
             <Image
               src={"/neetlogo.jpeg"}
-              width={300}
-              height={200}
+              width={180}
+              height={120}
               alt="NEET School System logo"
+              sizes="(max-width: 640px) 120px, 180px"
               className="h-9 sm:h-12 w-auto rounded-md object-contain"
               priority
             />
