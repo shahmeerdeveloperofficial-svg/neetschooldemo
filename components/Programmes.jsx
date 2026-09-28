@@ -39,7 +39,7 @@ const stages = [
       "Science & observational learning",
     ],
     image: "/slider4.JPG",
-    imagePos: "object-top",
+    imagePos: "object-center",
     badgeColor: "bg-[#001b44]",
   },
   {
@@ -57,7 +57,7 @@ const stages = [
       "Advanced subject understanding",
     ],
     image: "/slider3.JPG",
-    imagePos: "object-top",
+    imagePos: "object-center",
     badgeColor: "bg-[#b88308]",
   },
   {
@@ -75,7 +75,7 @@ const stages = [
       "Leadership & moral responsibility",
     ],
     image: "/slider2.JPG",
-    imagePos: "object-top",
+    imagePos: "object-center",
     badgeColor: "bg-[#001b44]",
   },
 ];

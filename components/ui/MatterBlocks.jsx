@@ -129,11 +129,24 @@ const MatterBlocks = ({ children }) => {
     );
 
     let animId;
+    let isVisible = true;
     const rerender = () => {
-      rectanglesRef.current.forEach((element) => element.render());
+      if (isVisible) {
+        rectanglesRef.current.forEach((element) => element.render());
+      }
       animId = requestAnimationFrame(rerender);
     };
     animId = requestAnimationFrame(rerender);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+        });
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(matterContainer);
 
     const handleResize = () => {
       const containerWidth = matterContainer.offsetWidth;

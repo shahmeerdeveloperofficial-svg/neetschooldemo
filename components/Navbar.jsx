@@ -46,9 +46,9 @@ const Navbar = () => {
   };
 
   const transition = {
-    duration: 0.8,
+    duration: 0.3,
     type: "tween",
-    ease: [0.76, 0, 0.24, 1],
+    ease: "easeInOut",
   };
 
   return (

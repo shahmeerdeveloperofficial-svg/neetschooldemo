@@ -16,21 +16,41 @@ const LenisSmooth = () => {
   }, [pathname, lenisRef]);
 
   useEffect(() => {
-    const lenis = new Lenis();
+    // Only initialize custom smooth scroll on desktop with mouse/pointer
+    const isMobile =
+      typeof window !== "undefined" &&
+      (window.innerWidth < 768 ||
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0);
+
+    if (isMobile) {
+      return;
+    }
+
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
+      gestureOrientation: "vertical",
+      smoothWheel: true,
+      syncTouch: false,
+    });
     lenisRef.current = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 800);
-    });
+    const tickerCallback = (time) => {
+      lenis.raf(time * 1000);
+    };
+    gsap.ticker.add(tickerCallback);
     gsap.ticker.lagSmoothing(0);
 
     return () => {
+      gsap.ticker.remove(tickerCallback);
       lenis.destroy();
     };
   }, []);
 
-  return true;
+  return null;
 };
 
 export default LenisSmooth;
