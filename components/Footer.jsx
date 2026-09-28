@@ -81,13 +81,23 @@ const Footer = () => {
       >
         <div className="maxWSec px-4 sm:px-8 md:px-12 py-6 sm:py-12 gap-8 sm:gap-12 flex max-sm:flex-col justify-between w-full">
           <div className="flex flex-col gap-4 max-sm:items-center max-sm:text-center sm:max-w-xs">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-gold text-2xl">★</span>
-              <span className="font-serif font-bold text-xl sm:text-2xl text-white tracking-wide">NEET School System</span>
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/neetlogo.jpeg"
+                alt="NEET School System Logo"
+                width={64}
+                height={64}
+                className="h-12 w-auto rounded-lg object-contain bg-white/10 p-0.5 border border-white/20 shadow-sm"
+              />
+              <div className="flex flex-col text-left">
+                <span className="font-serif font-bold text-lg sm:text-xl text-white tracking-wide leading-tight">
+                  NEET School System
+                </span>
+                <span className="text-[11px] sm:text-xs text-gold italic font-serif">
+                  Learn Today. Lead Tomorrow.
+                </span>
+              </div>
             </Link>
-            <p className="text-xs sm:text-sm text-gold italic font-serif">
-              Learn Today. Lead Tomorrow.
-            </p>
             <p className="text-xs text-white/70 leading-relaxed">
               Where Learning Becomes Leadership. Knowledge · Character · Discipline · Creativity · Leadership · Excellence.
             </p>
