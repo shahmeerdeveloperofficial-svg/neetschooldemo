@@ -71,12 +71,12 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="lg:col-span-5 relative h-72 sm:h-80 rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+          <div className="lg:col-span-5 relative aspect-[3/4] sm:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#001b44]">
             <Image
-              src="/slider1.JPG"
-              alt="NEET School Campus"
+              src="/neet-campus-poster.jpg"
+              alt="NEET School System Campus & Islamic Ethos - Surah Taha 20:114"
               fill
-              className="object-cover"
+              className="object-contain bg-[#001b44]"
               sizes="(max-width: 1024px) 100vw, 40vw"
             />
           </div>

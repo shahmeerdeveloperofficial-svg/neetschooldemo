@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import {
   FaGraduationCap,
   FaChalkboardTeacher,
@@ -9,6 +11,7 @@ import {
   FaFutbol,
   FaHandshake,
   FaChartLine,
+  FaBookOpen,
 } from "react-icons/fa";
 
 const features = [
@@ -128,6 +131,56 @@ export default function About() {
             <Card {...feature} />
           </motion.div>
         ))}
+      </div>
+
+      {/* Official Campus & Vision Showcase Banner */}
+      <div className="rounded-3xl bg-gradient-to-br from-[#001b44] via-[#092556] to-[#00122e] text-white p-6 sm:p-10 lg:p-12 shadow-2xl border border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-4">
+        <div className="lg:col-span-7 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/15 border border-gold/40 text-gold font-bold text-xs uppercase tracking-wider">
+            Campus &amp; Islamic Ethos
+          </div>
+          <div className="space-y-1">
+            <p className="font-serif text-xl sm:text-2xl text-gold font-bold">
+              وَقُل رَّبِّ زِدْنِي عِلْمًا
+            </p>
+            <p className="text-xs sm:text-sm text-white/80 italic font-serif">
+              &ldquo;O my Lord! Increase me in knowledge.&rdquo; — Surah Taha (20:114)
+            </p>
+          </div>
+          <h3 className="font-berlin text-2xl sm:text-4xl text-white leading-tight">
+            Learn Today, Lead Tomorrow <br />
+            <span className="text-gold">Building Futures, Inspiring Excellence</span>
+          </h3>
+          <p className="text-xs sm:text-base text-white/85 leading-relaxed">
+            Located on <strong>Main Sialkot Road, Gujranwala</strong> (Opposite Resto Fast Food, Near Sheikh Saddiq Eye Hospital), our purpose-built campus provides a secure, disciplined, and nurturing environment from Play Group to Matric.
+          </p>
+          <div className="pt-2 flex flex-wrap gap-3">
+            <Link
+              href="/AboutUs"
+              className="px-6 py-3 rounded-xl bg-gold hover:bg-main text-dark font-bold text-sm shadow-md transition-all active:scale-95"
+            >
+              Learn More About NEET →
+            </Link>
+            <Link
+              href="/ContactUs"
+              className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/30 backdrop-blur transition-all"
+            >
+              Visit Our Campus
+            </Link>
+          </div>
+        </div>
+
+        <div className="lg:col-span-5 flex justify-center">
+          <div className="relative w-full max-w-[380px] aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/90 bg-[#001738]">
+            <Image
+              src="/neet-campus-poster.jpg"
+              alt="NEET School System Campus Building - Learn Today Lead Tomorrow - Surah Taha"
+              fill
+              className="object-contain bg-[#001738]"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

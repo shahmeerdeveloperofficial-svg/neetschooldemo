@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   FaPhoneAlt,
   FaFileAlt,
@@ -102,33 +103,44 @@ export default function AdmissionSteps() {
           ))}
         </div>
 
-        {/* Admissions CTA Banner */}
-        <div className="rounded-3xl bg-gradient-to-r from-[#001b44] via-[#0a275e] to-[#001b44] text-white p-6 sm:p-10 lg:p-12 shadow-xl border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-2 max-w-2xl text-center md:text-left">
-            <span className="text-xs sm:text-sm font-bold tracking-widest text-gold uppercase">
-              Admissions Open · Gujranwala
+        {/* Admissions Showcase & CTA Banner */}
+        <div className="rounded-3xl bg-gradient-to-br from-[#001b44] via-[#0a275e] to-[#00122e] text-white p-6 sm:p-10 lg:p-12 shadow-2xl border border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-gold/20 text-gold text-xs font-bold tracking-wider uppercase border border-gold/40">
+              Admissions Open · Gujranwala Campus
             </span>
-            <h3 className="font-berlin text-2xl sm:text-4xl text-white">
-              Your Child&apos;s Future Begins Today.
+            <h3 className="font-berlin text-2xl sm:text-4xl text-white leading-tight">
+              School Open for Learning <br />
+              <span className="text-gold">Play Group to Matric</span>
             </h3>
             <p className="text-xs sm:text-base text-white/85 leading-relaxed">
-              Choose an environment where your child can learn with confidence,
-              grow with character and lead with purpose.
+              Give your child an empowering education combining conceptual mastery, smart labs, activity-based learning, and strong Islamic moral values under experienced leadership.
             </p>
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
+              <Link href="/OnlineAdmission">
+                <button className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl bg-gold hover:bg-main text-dark font-bold text-sm sm:text-base shadow-lg transition-all active:scale-95 flex items-center gap-2">
+                  <span>Apply for Admission</span>
+                  <FaArrowRight />
+                </button>
+              </Link>
+              <a href="tel:+923007441617">
+                <button className="px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm sm:text-base border border-white/30 backdrop-blur transition-all">
+                  Call: 0300-7441617
+                </button>
+              </a>
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-3 flex-shrink-0">
-            <Link href="/OnlineAdmission">
-              <button className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl bg-gold hover:bg-main text-dark font-bold text-sm sm:text-base shadow-lg transition-all active:scale-95 flex items-center gap-2">
-                <span>Apply Today</span>
-                <FaArrowRight />
-              </button>
-            </Link>
-            <a href="tel:+923007441617">
-              <button className="px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm sm:text-base border border-white/30 backdrop-blur transition-all">
-                Call: 0300-7441617
-              </button>
-            </a>
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-[380px] aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/90 bg-[#001738]">
+              <Image
+                src="/neet-admission-poster.jpg"
+                alt="NEET School System Admissions Open - Play Group to Matric"
+                fill
+                className="object-contain bg-[#001738]"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
           </div>
         </div>
       </div>

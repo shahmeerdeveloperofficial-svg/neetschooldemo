@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import HeroHeader from "@/components/HeroHeader";
 import AdmissionForm from "@/components/AdmissionForm";
 import {
@@ -10,6 +11,9 @@ import {
   FaUserCheck,
   FaComments,
   FaCheckCircle,
+  FaAward,
+  FaShieldAlt,
+  FaLaptopCode,
 } from "react-icons/fa";
 
 const steps = [
@@ -94,6 +98,67 @@ export default function OnlineAdmission() {
             <p className="text-xs sm:text-sm text-white/85 leading-relaxed">
               Near Sialkot Bypass, Model Sialkot Road, Gujranwala. Admissions Office Open Monday–Saturday: 8:00 AM – 2:00 PM.
             </p>
+          </div>
+        </div>
+
+        {/* Official Admissions Prospectus & Highlights Banner */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-br from-[#001b44] via-[#092556] to-[#00122e] text-white p-6 sm:p-10 rounded-3xl shadow-2xl border border-white/15">
+          <div className="lg:col-span-6 space-y-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/15 border border-gold/40 text-gold font-bold text-xs uppercase tracking-wider">
+              Official Admissions Notice · Limited Seats
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-berlin font-bold text-white leading-tight">
+              School Open for Learning <br />
+              <span className="text-gold">Play Group to Matric</span>
+            </h2>
+            <p className="text-xs sm:text-base text-white/90 leading-relaxed">
+              A Better Education, A Brighter Future. Under the leadership of <strong>Sir Mujahid Ali Ansari (Chairman &amp; Principal)</strong>, NEET School System offers conceptual learning, moral discipline, and modern facilities for your child&apos;s complete success.
+            </p>
+            <div className="grid grid-cols-2 gap-3 pt-1">
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/10 border border-white/10 text-xs sm:text-sm font-medium">
+                <FaAward className="text-gold flex-shrink-0" />
+                <span>Qualified Faculty</span>
+              </div>
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/10 border border-white/10 text-xs sm:text-sm font-medium">
+                <FaShieldAlt className="text-gold flex-shrink-0" />
+                <span>Safe Campus</span>
+              </div>
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/10 border border-white/10 text-xs sm:text-sm font-medium">
+                <FaLaptopCode className="text-gold flex-shrink-0" />
+                <span>Smart Labs</span>
+              </div>
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/10 border border-white/10 text-xs sm:text-sm font-medium">
+                <FaCheckCircle className="text-gold flex-shrink-0" />
+                <span>Activity-Based</span>
+              </div>
+            </div>
+            <div className="pt-2 flex flex-wrap gap-3">
+              <a
+                href="#form"
+                className="px-6 py-3 rounded-xl bg-gold hover:bg-main text-dark font-bold text-sm shadow-lg transition-all duration-200"
+              >
+                Fill Admission Form ↓
+              </a>
+              <a
+                href="tel:03007441617"
+                className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/30 transition-all duration-200"
+              >
+                Call: 0300-7441617
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="relative w-full max-w-[460px] aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/90 bg-[#001738]">
+              <Image
+                src="/neet-admission-poster.jpg"
+                alt="NEET School System - Admissions Open Play Group to Matric - Sir Mujahid Ali Ansari"
+                fill
+                className="object-contain bg-[#001738]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
           </div>
         </div>
 
