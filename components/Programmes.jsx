@@ -176,19 +176,21 @@ export default function Programmes() {
           </div>
         </div>
 
-        <div className="lg:col-span-5 relative h-80 sm:h-96 lg:h-[440px] rounded-2xl overflow-hidden shadow-xl border-2 border-white bg-[#001738]">
-          <Image
-            src={activeStage.image}
-            alt={activeStage.title}
-            fill
-            className={`object-cover ${activeStage.imagePos || "object-top"}`}
-            sizes="(max-width: 1024px) 100vw, 40vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
-          <div className="absolute bottom-4 left-4 right-4 text-white">
-            <p className="text-xs uppercase tracking-widest text-[#d7a51b] font-bold">NEET School System</p>
-            <p className="text-sm sm:text-base font-semibold">{activeStage.classes}</p>
+        <div className="lg:col-span-5 flex flex-col justify-center">
+          <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-xl border-2 border-white bg-[#001738]">
+            <Image
+              src={activeStage.image}
+              alt={activeStage.title}
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+            <div className="absolute bottom-3 left-3 right-3 text-white">
+              <p className="text-[10px] sm:text-xs uppercase tracking-widest text-[#d7a51b] font-bold">NEET School System</p>
+              <p className="text-xs sm:text-sm font-semibold">{activeStage.classes}</p>
+            </div>
           </div>
         </div>
       </motion.div>
