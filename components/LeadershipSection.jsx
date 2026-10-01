@@ -52,7 +52,7 @@ export default function LeadershipSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <div className="absolute bottom-5 left-5 right-5 text-white">
               <div className="inline-block px-3 py-1 rounded-md bg-gold text-dark font-bold text-xs mb-1">
-                MA · 21 Years as Principal
+                Principal Since 2005
               </div>
               <h3 className="font-berlin text-xl sm:text-2xl text-white font-bold leading-tight">
                 Sir Mujahid Ali Ansari
@@ -78,7 +78,7 @@ export default function LeadershipSection() {
               Sir Mujahid Ali Ansari <span className="text-main font-normal">(MA)</span>
             </p>
             <p className="text-xs sm:text-sm font-bold text-gold uppercase tracking-wider">
-              21 Years of Experience as Principal
+              Principal Since 2005
             </p>
             <p className="text-xs sm:text-sm md:text-base text-gray leading-relaxed">
               With extensive experience in education and school leadership, the

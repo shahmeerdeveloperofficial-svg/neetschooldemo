@@ -15,8 +15,8 @@ const Dragables = () => {
       custom: "text-light bg-dark border-light",
     },
     {
-      title: "21+",
-      sub: "Years Leadership",
+      title: "2005",
+      sub: "Leadership Since",
       custom: "text-light bg-main border-main",
     },
     {

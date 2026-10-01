@@ -22,9 +22,9 @@ const advantages = [
     desc: "We prioritize concept clarity, deep understanding, regular practice and continuous improvement over rote memorization.",
   },
   {
-    title: "21+ Years of Leadership",
+    title: "Leadership Since 2005",
     icon: <FaAward className="text-xl text-gold" />,
-    desc: "Led by Sir Mujahid Ali Ansari (MA), an experienced educator with more than two decades of proven academic leadership.",
+    desc: "Led by Sir Mujahid Ali Ansari (MA), serving as Principal since 2005 with proven academic leadership.",
   },
   {
     title: "Dedicated & Caring Teachers",
@@ -59,7 +59,7 @@ const advantages = [
 ];
 
 const stats = [
-  { value: "21+", label: "Years Leadership Experience" },
+  { value: "Since 2005", label: "Leadership Experience" },
   { value: "PG–10", label: "Complete School Journey" },
   { value: "100%", label: "Individual Care & Focus" },
   { value: "1:1", label: "Parent–Teacher Collaboration" },

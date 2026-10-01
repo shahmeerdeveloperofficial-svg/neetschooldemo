@@ -39,7 +39,7 @@ const ChairmanMessage = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
               <div className="absolute bottom-5 left-5 right-5 text-white">
                 <span className="inline-block px-3 py-1 rounded-md bg-gold text-dark font-bold text-xs mb-1">
-                  MA · 21 Years Experience
+                  Principal Since 2005
                 </span>
                 <h3 className="font-berlin text-xl sm:text-2xl text-white font-bold leading-tight">
                   Sir Mujahid Ali Ansari
@@ -78,7 +78,7 @@ const ChairmanMessage = () => {
                 development.
               </p>
               <p>
-                With over 21 years of experience as Principal, my foremost priority is ensuring
+                Serving as Principal since 2005, my foremost priority is ensuring
                 that our students receive concept-based teaching, personal attention, and sincere
                 mentorship from committed educators.
               </p>
